@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "Travels";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Travels"),
+    url(./assets/fonts/TTTravels-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Travels";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Travels"),
+    url(./assets/fonts/TTTravels-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Travels";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Travels"),
+    url(./assets/fonts/TTTravels-Medium.ttf) format("truetype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Travels";
+}
+
+body {
+  background-color: #f4f4f5;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
+}
+
+@media (max-width: 900px) {
+  .page {
+    padding-top: 0;
+  }
+}

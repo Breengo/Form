@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 900px;
+  height: fit-content;
+  border-radius: 24px;
+  padding: 60px;
+  gap: 24px;
+}
+
+.progress_line {
+  margin-bottom: 70px;
+}
+
+.add_advantage {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #5558fa;
+  border-radius: 4px;
+  color: #5558fa;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.radio_group {
+  display: flex;
+  flex-direction: column;
+  color: #333333;
+  font-size: 14px;
+  p {
+    font-weight: 500;
+  }
+  margin-bottom: 40px;
+}
+
+.checkbox_group {
+  display: flex;
+  flex-direction: column;
+  color: #333333;
+  font-size: 14px;
+  p {
+    font-weight: 500;
+  }
+}
+
+.choice_list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox {
+  width: fit-content;
+}
+
+.radio {
+  width: fit-content;
+}

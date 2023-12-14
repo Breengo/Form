@@ -17,7 +17,7 @@ interface Data {
 const Main = () => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
-  const data = useAppSelector((state) => state.data);
+  const storeData = useAppSelector((state) => state.data);
 
   const {
     register,
@@ -26,8 +26,8 @@ const Main = () => {
   } = useForm({
     resolver: yupResolver(schema),
     defaultValues: {
-      email: data.email,
-      phone: data.phone,
+      email: storeData.email,
+      phone: storeData.phone,
     },
   });
 

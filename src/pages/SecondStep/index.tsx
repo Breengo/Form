@@ -24,14 +24,14 @@ const SecondStep = () => {
   const curId = React.useRef(0);
 
   const dispatch = useAppDispatch();
-  const data = useAppSelector((state) => state.data);
+  const storeData = useAppSelector((state) => state.data);
 
   const { handleSubmit, control, register } = useForm({
     resolver: yupResolver(schema),
     defaultValues: {
-      checkboxes: data.checkboxes,
+      checkboxes: storeData.checkboxes,
       radio: 2,
-      advantages: data.advantages,
+      advantages: storeData.advantages,
     },
   });
 

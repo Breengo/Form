@@ -22,7 +22,7 @@ const ThirdStep = () => {
   const [length, setLength] = React.useState(0);
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
-  const data = useAppSelector((state) => state.data);
+  const storeData = useAppSelector((state) => state.data);
   const [showModal, setShowModal] = React.useState("");
 
   const {
@@ -31,7 +31,7 @@ const ThirdStep = () => {
     register,
   } = useForm({
     resolver: yupResolver(schema),
-    defaultValues: { about: data.about },
+    defaultValues: { about: storeData.about },
   });
 
   function onSubmit(data: Data) {
@@ -45,7 +45,7 @@ const ThirdStep = () => {
     })
       .then(() => setShowModal("Success"))
       .catch(() => setShowModal("Error"));
-    axios.post("url", { data });
+    axios.post("url", { storeData });
 
     navigate("/third_step");
   }

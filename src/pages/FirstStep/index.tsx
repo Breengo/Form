@@ -21,7 +21,7 @@ interface Data {
 const FirstStep = () => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
-  const data = useAppSelector((state) => state.data);
+  const storeData = useAppSelector((state) => state.data);
 
   const {
     control,
@@ -31,10 +31,10 @@ const FirstStep = () => {
   } = useForm({
     resolver: yupResolver(schema),
     defaultValues: {
-      name: data.name,
-      sername: data.name,
-      nickname: data.name,
-      sex: data.sex,
+      name: storeData.name,
+      sername: storeData.name,
+      nickname: storeData.name,
+      sex: storeData.sex,
     },
   });
 
@@ -71,7 +71,7 @@ const FirstStep = () => {
         name="sex"
         control={control}
         render={({ field: { onChange } }) => (
-          <Selector defaultVal={data.sex} onChange={onChange} />
+          <Selector defaultVal={storeData.sex} onChange={onChange} />
         )}
       />
       <div className={styles.buttons}>

@@ -37,3 +37,13 @@
     }
   }
 }
+
+.hidden_selector {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .selector {
+    width: 100%;
+  }
+}

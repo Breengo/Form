@@ -19,3 +19,18 @@
   justify-content: space-between;
   margin-top: 70px;
 }
+
+@media (max-width: 900px) {
+  .container {
+    padding: 30px;
+    gap: 18px;
+  }
+
+  .progress_line {
+    margin-bottom: 20px;
+  }
+
+  .buttons {
+    margin-top: 30px;
+  }
+}

@@ -64,3 +64,21 @@
 .radio {
   width: fit-content;
 }
+
+@media (max-width: 900px) {
+  .container {
+    width: 100%;
+    padding: 30px;
+    gap: 18px;
+  }
+
+  .progress_line {
+    margin-bottom: 20px;
+  }
+
+  .add_advantage {
+    width: 33px;
+    height: 33px;
+    font-size: 20px;
+  }
+}

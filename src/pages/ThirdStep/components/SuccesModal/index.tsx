@@ -2,8 +2,11 @@ import styles from "./styles.module.scss";
 import successIcon from "../../../../assets/icons/success.svg";
 
 import BtnPrimary from "../../../../components/BtnPrimary";
+import { useNavigate } from "react-router-dom";
 
 const SuccesModal = () => {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.dark}>
       <div className={styles.modal}>
@@ -17,7 +20,7 @@ const SuccesModal = () => {
           <BtnPrimary
             id="button-to-main"
             text="На главную"
-            onClick={() => ""}
+            onClick={() => navigate("/")}
           />
         </div>
       </div>

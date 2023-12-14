@@ -2,14 +2,19 @@ import styles from "./styles.module.scss";
 
 interface Props {
   text: string;
-  onClick: () => void;
   id: string;
   className?: string;
+  onClick?: () => void;
 }
 
-const BtnPrimary = ({ text, onClick, id, className }: Props) => {
+const BtnPrimary = ({ text, id, className, onClick }: Props) => {
   return (
-    <button id={id} className={`${styles.btn} ${className}`} onClick={onClick}>
+    <button
+      onClick={onClick}
+      type="submit"
+      id={id}
+      className={`${styles.btn} ${className}`}
+    >
       {text}
     </button>
   );

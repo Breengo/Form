@@ -45,7 +45,7 @@ const ThirdStep = () => {
     })
       .then(() => setShowModal("Success"))
       .catch(() => setShowModal("Error"));
-    axios.post("url", { storeData });
+    axios.post("url", { ...storeData, about: data.about });
 
     navigate("/third_step");
   }
